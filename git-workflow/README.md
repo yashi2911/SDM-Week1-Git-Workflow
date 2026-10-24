@@ -20,3 +20,11 @@ node git-workflow/hello.js
 ```text
 Hello, World!
 ```
+## Git Workflow Practised
+
+- git init
+- git status
+- git add
+- git commit
+- git log
+- git push
