@@ -1,0 +1,367 @@
+
+/* 1. Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 85px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #0e0b18;
+    color: #f5f2ff;
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.container {
+    width: min(1100px, 90%);
+    margin-inline: auto;
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: #0e0b18;
+    border-bottom: 1px solid #292238;
+}
+
+.navbar {
+    min-height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.logo {
+    font-size: 1.35rem;
+    font-weight: 800;
+}
+
+.logo span {
+    color: #c084fc;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #c9c3d8;
+    font-size: 0.92rem;
+}
+
+.nav-links a:hover {
+    color: #d8b4fe;
+}
+
+/* 2. Hero section: Flexbox */
+.hero {
+    min-height: 520px;
+    padding-block: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 56px;
+}
+
+.hero-content {
+    max-width: 620px;
+}
+
+.eyebrow {
+    color: #c084fc;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.hero h1 {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    line-height: 1.1;
+    margin-bottom: 12px;
+}
+
+.hero h2 {
+    color: #d8b4fe;
+    font-size: clamp(1.15rem, 3vw, 1.7rem);
+    margin-bottom: 20px;
+}
+
+.hero-description,
+.section-description {
+    color: #b9b2c9;
+    max-width: 620px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 28px;
+}
+
+.button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 46px;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: 700;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+}
+
+.primary {
+    color: #1a1027;
+    background: #c084fc;
+}
+
+.primary:hover {
+    background: #d8b4fe;
+}
+
+.secondary {
+    border: 1px solid #514365;
+    color: #f5f2ff;
+}
+
+/* 3. Hero profile card */
+.hero-card {
+    flex: 0 0 290px;
+    padding: 32px 22px;
+    text-align: center;
+    background: linear-gradient(145deg, #21172f, #171222);
+    border: 1px solid #403052;
+    border-radius: 20px;
+}
+
+.avatar {
+    width: 105px;
+    height: 105px;
+    display: grid;
+    place-items: center;
+    margin: 0 auto 22px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #c084fc, #7c3aed);
+    color: #160d22;
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.hero-card h3 {
+    margin-bottom: 8px;
+}
+
+.hero-card p {
+    color: #b9b2c9;
+}
+
+.status {
+    margin-top: 22px;
+    font-size: 0.8rem;
+    color: #d9d1e6;
+}
+
+.status span {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-right: 6px;
+    border-radius: 50%;
+    background: #4ade80;
+}
+
+/* 4. General sections */
+.section {
+    padding-block: 75px;
+}
+
+.section-title {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    margin-bottom: 22px;
+}
+
+.skills-section {
+    background: #151020;
+}
+
+/* 5. CSS Grid: skills */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 30px;
+}
+
+.skill-card,
+.project-card {
+    padding: 24px;
+    background: #1b1528;
+    border: 1px solid #352944;
+    border-radius: 14px;
+}
+
+.skill-card h3,
+.project-card h3 {
+    margin-bottom: 8px;
+}
+
+.skill-card p,
+.project-card p {
+    color: #b9b2c9;
+    font-size: 0.94rem;
+}
+
+/* 6. CSS Grid: projects */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.project-number {
+    color: #c084fc;
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.tags span {
+    padding: 5px 9px;
+    border-radius: 6px;
+    background: #30213f;
+    color: #dfc5ff;
+    font-size: 0.75rem;
+}
+
+/* 7. Contact and footer */
+.contact-section {
+    padding-block: 75px;
+    text-align: center;
+    background: #191226;
+}
+
+.contact-content > p:not(.eyebrow) {
+    color: #b9b2c9;
+    margin-bottom: 24px;
+}
+
+.contact-content h2 {
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    margin-bottom: 12px;
+}
+
+.footer {
+    padding: 24px 5%;
+    text-align: center;
+    color: #a9a1b9;
+    border-top: 1px solid #292238;
+    font-size: 0.85rem;
+}
+
+/* 8. Tablet layout */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        justify-content: center;
+        padding-block: 18px;
+    }
+
+    .nav-links {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px 18px;
+    }
+
+    .hero {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-block: 65px;
+        gap: 36px;
+    }
+
+    .hero-card {
+        flex-basis: auto;
+        width: 100%;
+        max-width: 420px;
+        align-self: center;
+    }
+
+    .skills-grid,
+    .projects-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* 9. Mobile layout */
+@media (max-width: 480px) {
+    .container {
+        width: 90%;
+    }
+
+    .nav-links {
+        gap: 10px 14px;
+    }
+
+    .nav-links a {
+        font-size: 0.82rem;
+    }
+
+    .hero {
+        min-height: auto;
+        padding-block: 50px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .skills-grid,
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding-block: 52px;
+    }
+
+    .skill-card,
+    .project-card {
+        padding: 20px;
+    }
+}
